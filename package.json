@@ -1,0 +1,37 @@
+{
+	"name": "bird-rss-reader",
+	"version": "0.0.1",
+	"description": "Bird - RSS Reader",
+	"scripts": {
+		"start": "electron ./dist/main.bundle.js",
+		"build:dev": "rimraf dist && cross-env NODE_ENV=development webpack --watch --progress --colors",
+		"build:prod": "rimraf dist && cross-env NODE_ENV=production webpack --progress --colors"
+	},
+	"author": "Eugene Shamidanov <eugene.sha2@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1"
+	},
+	"devDependencies": {
+		"@types/react": "^16.9.35",
+		"@types/react-dom": "^16.9.8",
+		"copy-pkg-json-webpack-plugin": "0.0.38",
+		"cross-env": "^7.0.2",
+		"css-loader": "^3.5.3",
+		"electron": "^9.0.0",
+		"electron-builder": "^22.6.1",
+		"html-webpack-plugin": "^4.3.0",
+		"lodash": "^4.17.15",
+		"node-sass": "^4.14.1",
+		"rimraf": "^3.0.2",
+		"sass-loader": "^8.0.2",
+		"source-map-loader": "^0.2.4",
+		"style-loader": "^1.2.1",
+		"ts-loader": "^7.0.4",
+		"typescript": "^3.9.3",
+		"webpack": "^4.43.0",
+		"webpack-cli": "^3.3.11",
+		"webpack-merge": "^4.2.2"
+	}
+}
