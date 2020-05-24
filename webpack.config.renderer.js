@@ -9,7 +9,11 @@ module.exports = merge(baseConfig, {
 	module: {
 		rules: [
 			{
-				test: /\.s[ac]ss$/i,
+				test: /\.woff2($|\?)|\.svg($|\?)/,
+				use: 'url-loader',
+			},
+			{
+				test: /\.(s[ac]ss|css)$/i,
 				use: ['style-loader', 'css-loader', 'sass-loader'],
 			},
 		]

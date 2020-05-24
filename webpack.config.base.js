@@ -23,6 +23,9 @@ module.exports = {
 		path: path.join(__dirname, 'dist'),
 	},
 	resolve: {
+		alias: {
+			'@components': path.join(__dirname, 'src/renderer/components'),
+		},
 		extensions: [".ts", ".tsx", ".js", ".jsx"]
 	},
 	node: { __dirname: false, __filename: false },
