@@ -1,9 +1,8 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 
-import './scss/main.scss';
-import HelloWorld from './components/HelloWorld'
+import './styles/main.scss'
 
-ReactDOM.render(
-	<HelloWorld compiler="TypeScript" framework="React" />,
- 	document.getElementById('root'));
+import App from '@components/app'
+
+ReactDOM.render(<App />, document.getElementById('root'))

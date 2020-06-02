@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 
 const environment = {
 	isProduction: process.env.NODE_ENV === 'production',
@@ -11,7 +11,7 @@ const environment = {
 			case 'development':
 				return 'development'
 			default:
-				throw "Unknown environment"
+				throw new Error('Unknown environment')
 		}
 	}
 }
@@ -24,9 +24,10 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
+			'@public': path.join(__dirname, 'public'),
 			'@components': path.join(__dirname, 'src/renderer/components'),
 		},
-		extensions: [".ts", ".tsx", ".js", ".jsx"]
+		extensions: ['.ts', '.tsx', '.js', '.jsx']
 	},
 	node: { __dirname: false, __filename: false },
 	module: {
@@ -34,7 +35,7 @@ module.exports = {
 			{
 				enforce: "pre",
 				test: /\.js$/,
-				loader: "source-map-loader"
+				loader: 'source-map-loader'
 			},
 			{
 				test: /\.ts(x?)$/,
@@ -47,4 +48,4 @@ module.exports = {
 			}
 		]
 	}
-};
+}

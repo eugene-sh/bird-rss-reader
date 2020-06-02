@@ -1,0 +1,87 @@
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	width: 250px;
+	height: 100%;
+	user-select: none;
+	background-color: $sidebar-bg-color;
+}
+
+.sidebar-item {
+	padding-top: 50px;
+}
+
+.sidebar-item_content {
+	padding: 0 30px;
+}
+
+.sidebar-item_button {
+	@include link-button;
+
+	&:hover {
+		background-color: darken($sidebar-bg-color, $amount: 10%);
+	}
+
+	&:active {
+		background-color: darken($sidebar-bg-color, $amount: 15%);
+	}
+}
+
+.sidebar-item-stretch {
+	flex-grow: 1;
+	overflow-y: scroll;
+}
+
+.sidebar-action_button {
+	padding: 15px 0;
+	display: flex;
+}
+
+.sidebar-action_button_text {
+	font-size: 14px;
+	padding-left: 5px;
+}
+
+
+
+/* Some styles for scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: darken($sidebar-bg-color, $amount: 60%);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darken($sidebar-bg-color, $amount: 90%);
+} 
+
+.group-title {
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 12px;
+}
+
+.group-content {
+	padding-top: 15px;
+}
+
+
+.icon_text {
+	@include link-button;
+	display: flex;
+}
+
+.icon_text-text {
+	padding-left: 10px;
+}

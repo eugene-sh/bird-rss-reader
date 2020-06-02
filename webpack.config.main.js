@@ -1,6 +1,6 @@
-const merge = require('webpack-merge');
-const baseConfig = require('./webpack.config.base.js');
-const copyPkgJsonPlugin = require('copy-pkg-json-webpack-plugin');
+const merge = require('webpack-merge')
+const baseConfig = require('./webpack.config.base.js')
+const copyPkgJsonPlugin = require('copy-pkg-json-webpack-plugin')
 
 module.exports = merge(baseConfig, {
 	entry: './src/main/main.ts',

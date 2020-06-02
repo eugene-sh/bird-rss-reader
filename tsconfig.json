@@ -1,5 +1,8 @@
 {
 	"compilerOptions": {
+			"allowSyntheticDefaultImports": true,
+			"allowUnreachableCode": false,
+			"moduleResolution": "node",
 			"outDir": "./dist/",
 			"sourceMap": true,
 			"noImplicitAny": true,
@@ -9,7 +12,11 @@
 			"allowJs": false,
 			"module": "commonjs",
 			"target": "es6",
-			"jsx": "react"
+			"jsx": "react",
+			"baseUrl": "./",
+			"paths": {
+				"@components/*": ["src/renderer/components/*"]
+			}
 	},
 	"exclude": ["node_modules"]
 }

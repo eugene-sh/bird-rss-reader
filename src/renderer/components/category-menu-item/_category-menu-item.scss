@@ -1,0 +1,39 @@
+
+.category-item {
+	overflow: hidden;
+	font-size: 14px;
+	padding: 15px 0 15px 5px;
+	border-top: 1px solid darken($sidebar-bg-color, $amount: 10%);
+	&:first-child {	border-top: none; 	}
+
+	$self: &;
+	
+	#{ $self }_header {
+		display: flex;
+		font-weight: 700;
+	}
+
+	#{ $self }_icon {
+		margin: 0 10px 0 1px;
+	}
+
+	#{ $self }_content{
+		display: none;
+		height: 0;
+	}
+
+	&-opened {
+		#{ $self }_icon{
+			transform: rotate(90deg);
+		}
+
+		#{ $self }_content{
+			display: block;
+			height: auto;
+    }
+  }
+}
+
+.category-item_header, .category-item_content li {
+	@include link-button;
+}

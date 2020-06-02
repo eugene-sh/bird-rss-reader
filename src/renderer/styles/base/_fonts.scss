@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 200;
   src: local('Nunito ExtraLight'), local('Nunito-ExtraLight'),
-       url('../fonts/nunito-v12-latin_cyrillic-200.woff2') format('woff2'); 
+       url('~@public/fonts/nunito/nunito-v12-latin_cyrillic-200.woff2') format('woff2'); 
 }
 
 /* nunito-regular - latin_cyrillic */
@@ -13,7 +13,7 @@
   font-style: normal;
   font-weight: 400;
   src: local('Nunito Regular'), local('Nunito-Regular'),
-       url('../fonts/nunito-v12-latin_cyrillic-regular.woff2') format('woff2');
+       url('~@public/fonts/nunito/nunito-v12-latin_cyrillic-regular.woff2') format('woff2');
 }
 
 /* nunito-700 - latin_cyrillic */
@@ -22,5 +22,13 @@
   font-style: normal;
   font-weight: 700;
   src: local('Nunito Bold'), local('Nunito-Bold'),
-			 url('../fonts/nunito-v12-latin_cyrillic-700.woff2') format('woff2');
+			 url('~@public/fonts/nunito/nunito-v12-latin_cyrillic-700.woff2') format('woff2');
 }
+
+/* Font Awesome */
+$fa-font-path: "~@public/fonts/font-awesome";
+
+@import "./font-awesome/fontawesome";
+@import "./font-awesome/regular";
+@import "./font-awesome/solid";
+@import "./font-awesome/brands";
