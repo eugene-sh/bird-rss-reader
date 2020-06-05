@@ -1,4 +1,5 @@
-import * as React from 'react';
+import * as React from 'react'
+import { Link, NavLink } from "react-router-dom"
 
 import Logo from '@components/logo'
 import CategoryList from '@components/category-menu'
@@ -31,44 +32,48 @@ export default class Sidebar extends React.Component {
 		return (
 			<div className='sidebar'>
 
-				<div className='sidebar-item'>
+				<div className='sidebar-item' style={{marginTop: '25px'}}>
 					<div className='sidebar-item_content sidebar-item_button'>
 						<Logo />
 					</div>
 				</div>
 
-				<div className='sidebar-item'>
+				<div className='sidebar-item' style={{marginTop: '70px'}}>
 					<div className='sidebar-item_content'>
 
 						<Group title='Меню'>
-							<div style={{paddingBottom: 10}}>
-								<div className='icon_text'>
-									<div className='icon_text-icon'>
-										<i className="fas fa-calendar"></i>
-									</div>
-									<div className='icon_text-text'>
-										Сегодня
-									</div>
-								</div>
-							</div>
-							<div>
-								<div className='icon_text'>
-									<div className='icon_text-icon'>
-										<i className="fas fa-bookmark"></i>
-									</div>
-									<div className='icon_text-text'>
-										Закладки
+							<NavLink to="/today">
+								<div style={{padding: '15px 0'}}>
+									<div className='icon_text'>
+										<div className='icon_text-icon'>
+											<i className="fas fa-calendar"></i>
+										</div>
+										<div className='icon_text-text'>
+											Сегодня
+										</div>
 									</div>
 								</div>
-							</div>
+							</NavLink>
 
+							<Link to="/favorites">
+								<div>
+									<div className='icon_text'>
+										<div className='icon_text-icon'>
+											<i className="fas fa-bookmark"></i>
+										</div>
+										<div className='icon_text-text'>
+											Закладки
+									</div>
+									</div>
+								</div>
+							</Link>
 
 						</Group>
 
 					</div>
 				</div>
 
-				<div className='sidebar-item sidebar-item-stretch'>
+				<div className='sidebar-item sidebar-item-stretch' style={{marginTop: '70px'}}>
 					<div className='sidebar-item_content'>
 
 						<Group title='Категории'>
@@ -78,7 +83,7 @@ export default class Sidebar extends React.Component {
 					</div>
 				</div>
 
-				<div className='sidebar-item '>
+				<div className='sidebar-item' style={{marginTop: '70px', borderTop: '1px solid rgba(34,36,38,.15)'}}>
 					<div className='sidebar-item_content sidebar-item_button'>
 
 						<div className='sidebar-action_button'>

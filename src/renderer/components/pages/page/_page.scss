@@ -1,0 +1,24 @@
+.page {
+ margin-left: 100px;
+ margin-top: 25px;
+ max-width: 960px;
+}
+
+.page-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.page-title {
+	font-size: 32px;
+}
+
+.page-description {
+	font-size: 14px;
+	color: lighten($color: $font-color, $amount: 80%);
+}
+
+.page-content {
+ margin-top: 50px;
+}
