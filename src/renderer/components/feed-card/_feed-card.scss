@@ -1,0 +1,65 @@
+.feed_card {
+	display: flex;
+	flex-direction: row;
+
+	&:hover {
+		.feed_card-buttons {
+			opacity: 1;
+		}
+	}
+}
+
+.feed_card-image {
+	width: 200px;
+	height: 100px;
+}
+
+.feed_card-body {
+	margin-left: 20px;
+}
+
+.feed_card-title {
+	@include link-button;
+
+	font-weight: 700;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.feed_card-addinfo {
+	margin-bottom: 10px;
+	display: flex;
+	font-size: 14px;
+	color: lighten($color: $font-color, $amount: 60%);
+}
+
+.feed_card-divider {
+	margin: 0 5px;
+}
+
+.feed_card-article {
+	font-size: 14px;
+	margin-bottom: 10px;
+	text-align: justify;
+	color: lighten($color: $font-color, $amount: 30%);
+}
+
+.feed_card-buttons {
+	display: flex;
+	opacity: 0;
+}
+
+.feed_card-button {
+	padding: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+	color: lighten($color: $font-color, $amount: 30%);
+
+	&:hover {
+		color: $primary-color;
+	}
+	&:active {
+		border-radius: 5px;
+		background-color: lighten($color: $font-color, $amount: 95%);
+	}
+}

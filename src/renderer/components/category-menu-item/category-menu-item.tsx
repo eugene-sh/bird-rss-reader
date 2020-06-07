@@ -18,7 +18,7 @@ export function CategoryMenuItem({ categoryMenuItem }: CategoryMenuItemProps) {
 		<div className={`category-item ${opened ? 'category-item-opened' : ''}`}>
 			<div className='category-item_header' onClick={() => setOpened(!opened)}>
 				<div className='category-item_icon'>
-					<i className="fas fa-chevron-right"></i>
+					<i className="fas fa-caret-right"></i>
 				</div>
 				<div>
 					{categoryMenuItem.title.length > 16 ? `${categoryMenuItem.title.substr(0, 16)}...` : categoryMenuItem.title}
@@ -29,10 +29,12 @@ export function CategoryMenuItem({ categoryMenuItem }: CategoryMenuItemProps) {
 					{
 						categoryMenuItem.sources.map((source, key) => {
 							return (
-								<Link to={`/feed/${source}`} key={key}>
-									{source}
-								</Link >
-								) 
+								<div>
+									<Link to={`/feed/${source}`} key={key}>
+										{source}
+									</Link >
+								</div>
+							) 
 						})
 					}
 				</ul>
