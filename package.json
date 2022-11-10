@@ -22,7 +22,7 @@
 		"copy-pkg-json-webpack-plugin": "0.0.38",
 		"cross-env": "^7.0.2",
 		"css-loader": "^3.5.3",
-		"electron": "^15.5.5",
+		"electron": "^18.3.7",
 		"electron-builder": "^22.6.1",
 		"html-webpack-plugin": "^4.3.0",
 		"lodash": "^4.17.21",
