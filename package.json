@@ -23,7 +23,7 @@
 		"cross-env": "^7.0.2",
 		"css-loader": "^3.5.3",
 		"electron": "^15.5.5",
-		"electron-builder": "^22.6.1",
+		"electron-builder": "^25.1.8",
 		"html-webpack-plugin": "^4.3.0",
 		"lodash": "^4.17.21",
 		"node-sass": "^7.0.0",
